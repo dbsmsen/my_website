@@ -54,126 +54,126 @@ or sharing knowledge with the developer community.
              proficiency: 0.95,
              color: const Color(0xFFE34F26), // HTML orange
            ),
-          Skill(
-            name: 'JavaScript',
-            category: 'Frontend',
-            proficiency: 0.9,
-            color: const Color(0xFFF7DF1E),
-          ),
-          Skill(
-            name: 'TypeScript',
-            category: 'Frontend',
-            proficiency: 0.85,
-            color: const Color(0xFF3178C6),
-          ),
+                     Skill(
+             name: 'JavaScript',
+             category: 'Frontend',
+             proficiency: 0.9,
+             color: const Color(0xFFF7DF1E), // JavaScript yellow
+           ),
+                     Skill(
+             name: 'TypeScript',
+             category: 'Frontend',
+             proficiency: 0.85,
+             color: const Color(0xFF3178C6), // TypeScript blue
+           ),
         ],
       ),
       SkillCategory(
         name: 'Backend Development',
         icon: Icons.storage,
         skills: [
-          Skill(
-            name: 'Node.js',
-            category: 'Backend',
-            proficiency: 0.85,
-            color: const Color(0xFF339933),
-          ),
-          Skill(
-            name: 'Python',
-            category: 'Backend',
-            proficiency: 0.8,
-            color: const Color(0xFF3776AB),
-          ),
-          Skill(
-            name: 'Django',
-            category: 'Backend',
-            proficiency: 0.75,
-            color: const Color(0xFF092E20),
-          ),
-          Skill(
-            name: 'Express.js',
-            category: 'Backend',
-            proficiency: 0.8,
-            color: const Color(0xFF000000),
-          ),
-          Skill(
-            name: 'MongoDB',
-            category: 'Backend',
-            proficiency: 0.75,
-            color: const Color(0xFF47A248),
-          ),
-          Skill(
-            name: 'PostgreSQL',
-            category: 'Backend',
-            proficiency: 0.7,
-            color: const Color(0xFF336791),
-          ),
+                     Skill(
+             name: 'Node.js',
+             category: 'Backend',
+             proficiency: 0.85,
+             color: const Color(0xFF339933), // Node.js green
+           ),
+                     Skill(
+             name: 'Python',
+             category: 'Backend',
+             proficiency: 0.8,
+             color: const Color(0xFF3776AB), // Python blue
+           ),
+                     Skill(
+             name: 'Django',
+             category: 'Backend',
+             proficiency: 0.75,
+             color: const Color(0xFF092E20), // Django dark green
+           ),
+                     Skill(
+             name: 'Express.js',
+             category: 'Backend',
+             proficiency: 0.8,
+             color: const Color(0xFF000000), // Express black
+           ),
+                     Skill(
+             name: 'MongoDB',
+             category: 'Backend',
+             proficiency: 0.75,
+             color: const Color(0xFF47A248), // MongoDB green
+           ),
+                     Skill(
+             name: 'PostgreSQL',
+             category: 'Backend',
+             proficiency: 0.7,
+             color: const Color(0xFF336791), // PostgreSQL blue
+           ),
         ],
       ),
       SkillCategory(
         name: 'Mobile Development',
         icon: Icons.phone_android,
         skills: [
-          Skill(
-            name: 'Flutter',
-            category: 'Mobile',
-            proficiency: 0.9,
-            color: const Color(0xFF02569B),
-          ),
-          Skill(
-            name: 'React Native',
-            category: 'Mobile',
-            proficiency: 0.75,
-            color: const Color(0xFF61DAFB),
-          ),
-          Skill(
-            name: 'Android',
-            category: 'Mobile',
-            proficiency: 0.7,
-            color: const Color(0xFF3DDC84),
-          ),
-          Skill(
-            name: 'iOS',
-            category: 'Mobile',
-            proficiency: 0.65,
-            color: const Color(0xFF000000),
-          ),
+                     Skill(
+             name: 'Flutter',
+             category: 'Mobile',
+             proficiency: 0.9,
+             color: const Color(0xFF00B4D8), // Flutter blue
+           ),
+                     Skill(
+             name: 'React Native',
+             category: 'Mobile',
+             proficiency: 0.75,
+             color: const Color(0xFF61DAFB), // React Native blue
+           ),
+                     Skill(
+             name: 'Android',
+             category: 'Mobile',
+             proficiency: 0.7,
+             color: const Color(0xFF3DDC84), // Android green
+           ),
+                     Skill(
+             name: 'iOS',
+             category: 'Mobile',
+             proficiency: 0.65,
+             color: const Color(0xFF000000), // iOS black
+           ),
         ],
       ),
       SkillCategory(
         name: 'Tools & Others',
         icon: Icons.build,
         skills: [
-          Skill(
-            name: 'Git',
-            category: 'Tools',
-            proficiency: 0.9,
-            color: const Color(0xFFF05032),
-          ),
-          Skill(
-            name: 'Docker',
-            category: 'Tools',
-            proficiency: 0.75,
-            color: const Color(0xFF2496ED),
-          ),
-          Skill(
-            name: 'AWS',
-            category: 'Tools',
-            proficiency: 0.7,
-            color: const Color(0xFF232F3E),
-          ),
-          Skill(
-            name: 'Firebase',
-            category: 'Tools',
-            proficiency: 0.8,
-            color: const Color(0xFFFFCA28),
-          ),
-          Skill(
-            name: 'Figma',
-            category: 'Tools',
-            proficiency: 0.75,
-            color: const Color(0xFFF24E1E),
-          ),
+                     Skill(
+             name: 'Git',
+             category: 'Tools',
+             proficiency: 0.9,
+             color: const Color(0xFFF05032), // Git orange
+           ),
+                     Skill(
+             name: 'Docker',
+             category: 'Tools',
+             proficiency: 0.75,
+             color: const Color(0xFF2496ED), // Docker blue
+           ),
+                     Skill(
+             name: 'AWS',
+             category: 'Tools',
+             proficiency: 0.7,
+             color: const Color(0xFF232F3E), // AWS dark blue
+           ),
+                     Skill(
+             name: 'Firebase',
+             category: 'Tools',
+             proficiency: 0.8,
+             color: const Color(0xFFFFCA28), // Firebase yellow
+           ),
+                     Skill(
+             name: 'Figma',
+             category: 'Tools',
+             proficiency: 0.75,
+             color: const Color(0xFFF24E1E), // Figma orange
+           ),
         ],
       ),
     ];

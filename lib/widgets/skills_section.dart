@@ -308,25 +308,25 @@ class _SkillItem extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 widthFactor: skill.proficiency * animation.value,
                 child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
-                        const Color(0xFF00B4D8),
-                        const Color(0xFF48CAE4),
-                        const Color(0xFF90E0EF),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(5),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFF00B4D8).withOpacity(0.5),
-                        blurRadius: 8,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
-                  ),
+                                     decoration: BoxDecoration(
+                     gradient: LinearGradient(
+                       begin: Alignment.centerLeft,
+                       end: Alignment.centerRight,
+                       colors: [
+                         skill.color ?? const Color(0xFF00B4D8),
+                         (skill.color ?? const Color(0xFF00B4D8)).withOpacity(0.7),
+                         (skill.color ?? const Color(0xFF00B4D8)).withOpacity(0.4),
+                       ],
+                     ),
+                     borderRadius: BorderRadius.circular(5),
+                     boxShadow: [
+                       BoxShadow(
+                         color: (skill.color ?? const Color(0xFF00B4D8)).withOpacity(0.5),
+                         blurRadius: 8,
+                         offset: const Offset(0, 2),
+                       ),
+                     ],
+                   ),
                 ),
               ),
             );
