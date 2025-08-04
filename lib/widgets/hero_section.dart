@@ -77,7 +77,7 @@ class _HeroSectionState extends State<HeroSection>
         children: [
           // Animated background elements
           _AnimatedBackgroundElements(),
-          
+
           // Main content
           FadeTransition(
             opacity: _fadeAnimation,
@@ -91,7 +91,10 @@ class _HeroSectionState extends State<HeroSection>
                     children: [
                       // Animated greeting with enhanced styling
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 10,
+                        ),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
@@ -113,12 +116,16 @@ class _HeroSectionState extends State<HeroSection>
                               'Hi, I\'m ${PortfolioData.name}',
                               textStyle: TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.width > 768 ? 48 : 32,
+                                    MediaQuery.of(context).size.width > 768
+                                        ? 48
+                                        : 32,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 shadows: [
                                   Shadow(
-                                    color: const Color(0xFF00B4D8).withOpacity(0.5),
+                                    color: const Color(
+                                      0xFF00B4D8,
+                                    ).withOpacity(0.5),
                                     blurRadius: 10,
                                     offset: const Offset(0, 2),
                                   ),
@@ -131,91 +138,97 @@ class _HeroSectionState extends State<HeroSection>
                         ),
                       ),
 
-                  const SizedBox(height: 20),
+                      const SizedBox(height: 20),
 
-                  // Title
-                  Text(
-                    PortfolioData.title,
-                    style: TextStyle(
-                      fontSize:
-                          MediaQuery.of(context).size.width > 768 ? 24 : 18,
-                      color: const Color(0xFF00B4D8),
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-
-                  const SizedBox(height: 16),
-
-                  // Subtitle
-                  Text(
-                    PortfolioData.subtitle,
-                    style: TextStyle(
-                      fontSize:
-                          MediaQuery.of(context).size.width > 768 ? 18 : 16,
-                      color: Colors.white.withOpacity(0.8),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-
-                  const SizedBox(height: 40),
-
-                  // Action buttons
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _ActionButton(
-                        text: 'View Projects',
-                        onPressed: () {
-                          // Scroll to projects section
-                          // This will be handled by the parent widget
-                        },
-                        isPrimary: true,
+                      // Title
+                      Text(
+                        PortfolioData.title,
+                        style: TextStyle(
+                          fontSize:
+                              MediaQuery.of(context).size.width > 768 ? 24 : 18,
+                          color: const Color(0xFF00B4D8),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                      const SizedBox(width: 20),
-                      _ActionButton(
-                        text: 'Contact Me',
-                        onPressed: () {
-                          // Scroll to contact section
-                          // This will be handled by the parent widget
-                        },
-                        isPrimary: false,
+
+                      const SizedBox(height: 16),
+
+                      // Subtitle
+                      Text(
+                        PortfolioData.subtitle,
+                        style: TextStyle(
+                          fontSize:
+                              MediaQuery.of(context).size.width > 768 ? 18 : 16,
+                          color: Colors.white.withOpacity(0.8),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+
+                      const SizedBox(height: 40),
+
+                      // Action buttons
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _ActionButton(
+                            text: 'View Projects',
+                            onPressed: () {
+                              // Scroll to projects section
+                              // This will be handled by the parent widget
+                            },
+                            isPrimary: true,
+                          ),
+                          const SizedBox(width: 20),
+                          _ActionButton(
+                            text: 'Contact Me',
+                            onPressed: () {
+                              // Scroll to contact section
+                              // This will be handled by the parent widget
+                            },
+                            isPrimary: false,
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 40),
+
+                      // Social links
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _SocialButton(
+                            icon: Icons.code,
+                            onPressed:
+                                () => _launchUrl(PortfolioData.githubUrl),
+                            tooltip: 'GitHub',
+                          ),
+                          const SizedBox(width: 20),
+                          _SocialButton(
+                            icon: Icons.work,
+                            onPressed:
+                                () => _launchUrl(PortfolioData.linkedinUrl),
+                            tooltip: 'LinkedIn',
+                          ),
+                          const SizedBox(width: 20),
+                          _SocialButton(
+                            icon: Icons.email,
+                            onPressed:
+                                () =>
+                                    _launchUrl('mailto:${PortfolioData.email}'),
+                            tooltip: 'Email',
+                          ),
+                          const SizedBox(width: 20),
+                          _SocialButton(
+                            icon: Icons.camera_alt,
+                            onPressed:
+                                () => _launchUrl(PortfolioData.instagramUrl),
+                            tooltip: 'Instagram',
+                          ),
+                        ],
                       ),
                     ],
                   ),
-
-                  const SizedBox(height: 40),
-
-                  // Social links
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _SocialButton(
-                        icon: Icons.code,
-                        onPressed: () => _launchUrl(PortfolioData.githubUrl),
-                        tooltip: 'GitHub',
-                      ),
-                      const SizedBox(width: 20),
-                      _SocialButton(
-                        icon: Icons.work,
-                        onPressed: () => _launchUrl(PortfolioData.linkedinUrl),
-                        tooltip: 'LinkedIn',
-                      ),
-                      const SizedBox(width: 20),
-                      _SocialButton(
-                        icon: Icons.email,
-                        onPressed:
-                            () => _launchUrl('mailto:${PortfolioData.email}'),
-                        tooltip: 'Email',
-                      ),
-                      const SizedBox(width: 20),
-                      _SocialButton(
-                        icon: Icons.camera_alt,
-                        onPressed: () => _launchUrl(PortfolioData.instagramUrl),
-                        tooltip: 'Instagram',
-                      ),
-                    ],
-                  ),
-                ],
+                ),
               ),
             ),
           ),
@@ -420,15 +433,17 @@ class _AnimatedBackgroundElements extends StatefulWidget {
   const _AnimatedBackgroundElements();
 
   @override
-  State<_AnimatedBackgroundElements> createState() => _AnimatedBackgroundElementsState();
+  State<_AnimatedBackgroundElements> createState() =>
+      _AnimatedBackgroundElementsState();
 }
 
-class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements>
+class _AnimatedBackgroundElementsState
+    extends State<_AnimatedBackgroundElements>
     with TickerProviderStateMixin {
   late AnimationController _floatingController;
   late AnimationController _pulseController;
   late AnimationController _rotateController;
-  
+
   late Animation<double> _floatingAnimation;
   late Animation<double> _pulseAnimation;
   late Animation<double> _rotateAnimation;
@@ -436,32 +451,30 @@ class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements
   @override
   void initState() {
     super.initState();
-    
+
     _floatingController = AnimationController(
       duration: const Duration(seconds: 6),
       vsync: this,
     )..repeat(reverse: true);
-    
+
     _pulseController = AnimationController(
       duration: const Duration(seconds: 3),
       vsync: this,
     )..repeat(reverse: true);
-    
+
     _rotateController = AnimationController(
       duration: const Duration(seconds: 20),
       vsync: this,
     )..repeat();
 
-    _floatingAnimation = Tween<double>(
-      begin: -20.0,
-      end: 20.0,
-    ).animate(CurvedAnimation(parent: _floatingController, curve: Curves.easeInOut));
-    
-    _pulseAnimation = Tween<double>(
-      begin: 0.8,
-      end: 1.2,
-    ).animate(CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut));
-    
+    _floatingAnimation = Tween<double>(begin: -20.0, end: 20.0).animate(
+      CurvedAnimation(parent: _floatingController, curve: Curves.easeInOut),
+    );
+
+    _pulseAnimation = Tween<double>(begin: 0.8, end: 1.2).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+
     _rotateAnimation = Tween<double>(
       begin: 0.0,
       end: 1.0,
@@ -510,7 +523,7 @@ class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements
             },
           ),
         ),
-        
+
         Positioned(
           top: 200,
           right: 80,
@@ -540,7 +553,7 @@ class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements
             },
           ),
         ),
-        
+
         Positioned(
           bottom: 150,
           left: 100,
@@ -570,7 +583,7 @@ class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements
             },
           ),
         ),
-        
+
         Positioned(
           bottom: 250,
           right: 120,
@@ -600,7 +613,7 @@ class _AnimatedBackgroundElementsState extends State<_AnimatedBackgroundElements
             },
           ),
         ),
-        
+
         // Animated lines connecting elements
         CustomPaint(
           painter: _AnimatedLinesPainter(
@@ -625,16 +638,20 @@ class _AnimatedLinesPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.0;
+    final paint =
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.0;
 
     // Draw animated connecting lines
     final points = [
       Offset(110, 130 + floatingAnimation.value),
       Offset(size.width - 120, 240),
       Offset(180, size.height - 190),
-      Offset(size.width - 170, size.height - 275 + floatingAnimation.value * 0.5),
+      Offset(
+        size.width - 170,
+        size.height - 275 + floatingAnimation.value * 0.5,
+      ),
     ];
 
     for (int i = 0; i < points.length; i++) {
@@ -648,11 +665,11 @@ class _AnimatedLinesPainter extends CustomPainter {
               const Color(0xFF90E0EF).withOpacity(opacity * 0.7),
             ],
           );
-          
+
           paint.shader = gradient.createShader(
             Rect.fromPoints(points[i], points[j]),
           );
-          
+
           canvas.drawLine(points[i], points[j], paint);
         }
       }
